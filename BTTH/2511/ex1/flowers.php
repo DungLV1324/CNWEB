@@ -17,5 +17,45 @@ $flowers = [
     ['id' => 13, 'name' => 'Cẩm tú cầu', 'moTa' => $strings['img13'], 'image' => 'image/img_15.png'],
     ['id' => 14, 'name' => 'Hoa cúc dại', 'moTa' => $strings['img14'], 'image' => 'image/img_16.png'],
 ];
+// Thêm
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['addProduct'])) {
+    $newProduct = [
+        'id' => count($flowers) + 1, // Tự động tăng id
+        'name' => $_POST['name'],
+        'moTa' => $_POST['moTa'],
+        'image' => $_POST['image'],
+    ];
+    $flowers[] = $newProduct;
+}
+
+
+
+// Sửa
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['editProduct'])) {
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $moTa = $_POST['moTa'];
+    $image = $_POST['image'];
+
+    foreach ($flowers as &$flower) {
+        if ($flower['id'] == $id) {
+            $flower['name'] = $name;
+            $flower['moTa'] = $moTa;
+            $flower['image'] = $image;
+            break;
+        }
+    }
+    $_SESSION['products'] = $flowers; // Cập nhật session nếu dùng session
+}
+
+// Xóa
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deleteProduct'])) {
+    $id = $_POST['id'];
+    foreach ($flowers as $key => $flower) {
+        if ($flower['id'] == $id) {
+            unset($flowers[$key]);
+        }
+    }
+}
 
 

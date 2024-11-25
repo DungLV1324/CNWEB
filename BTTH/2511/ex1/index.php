@@ -46,88 +46,88 @@ include('itemheader.php'); ?>
 
 <?php include('itemfooter.php'); ?>
 
-<!--<div id="addProductModal" class="modal fade">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <form action="main.php" method="POST">-->
-<!--                <div class="modal-header">-->
-<!--                    <h4 class="modal-title">Add New Product</h4>-->
-<!--                    <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                    <div class="form-group">-->
-<!--                        <label for="name">Tên</label>-->
-<!--                        <input type="text" class="form-control" name="name" required>-->
-<!--                    </div>-->
-<!--                    <div class="form-group">-->
-<!--                        <label for="gia">Số Lượng</label>-->
-<!--                        <input type="number" class="form-control" name="gia" required>-->
-<!--                    </div>-->
-<!--                    <div class="form-group">-->
-<!--                        <label for="gia">Giá Cả</label>-->
-<!--                        <input type="text" class="form-control" name="gia" required>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="modal-footer">-->
-<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>-->
-<!--                    <button type="submit" name="addProduct" class="btn btn-success">Add</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!---->
-<!---->
-<!--<div id="editProductModal" class="modal fade">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <form action="main.php" method="POST">-->
-<!--                <div class="modal-header">-->
-<!--                    <h4 class="modal-title">Edit Product</h4>-->
-<!--                    <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                    <input type="hidden" name="id" id="edit-id">-->
-<!--                    <div class="form-group">-->
-<!--                        <label for="name">Tên</label>-->
-<!--                        <input type="text" class="form-control" name="name" id="edit-name" required>-->
-<!--                    </div>-->
-<!--                    <div class="form-group">-->
-<!--                        <label for="soLuong">Số Lượng</label>-->
-<!--                        <input type="number" class="form-control" name="soLuong" id="edit-soLuong" required>-->
-<!--                    </div>-->
-<!--                    <div class="form-group">-->
-<!--                        <label for="gia">Giá Cả</label>-->
-<!--                        <input type="text" class="form-control" name="gia" id="edit-gia" required>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="modal-footer">-->
-<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>-->
-<!--                    <button type="submit" name="editProduct" class="btn btn-info">Save Changes</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!---->
-<!---->
-<!--<div id="deleteProductModal" class="modal fade">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <form action="main.php" method="POST">-->
-<!--                <div class="modal-header">-->
-<!--                    <h4 class="modal-title">Delete Product</h4>-->
-<!--                    <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                    <input type="hidden" name="id" id="delete-id">-->
-<!--                    <p>Are you sure you want to delete this product?</p>-->
-<!--                </div>-->
-<!--                <div class="modal-footer">-->
-<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>-->
-<!--                    <button type="submit" name="deleteProduct" class="btn btn-danger">Delete</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div id="addProductModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="main.php" method="POST">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add New Product</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Tên</label>
+                        <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="moTa">Số Lượng</label>
+                        <input type="number" class="form-control" name="moTa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="moTa">Giá Cả</label>
+                        <input type="text" class="form-control" name="moTa" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" name="addProduct" class="btn btn-success">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="editProductModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="main.php" method="POST">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Product</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="edit-id">
+                    <div class="form-group">
+                        <label for="name">Tên</label>
+                        <input type="text" class="form-control" name="name" id="edit-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="soLuong">Số Lượng</label>
+                        <input type="number" class="form-control" name="soLuong" id="edit-soLuong" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="moTa">Giá Cả</label>
+                        <input type="text" class="form-control" name="moTa" id="edit-moTa" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" name="editProduct" class="btn btn-info">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="deleteProductModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="main.php" method="POST">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Product</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="delete-id">
+                    <p>Are you sure you want to delete this product?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" name="deleteProduct" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
