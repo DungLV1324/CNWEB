@@ -1,4 +1,7 @@
 <?php global $data ?>
+<?php include('./views/partials/itemheader.php'); ?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -63,4 +66,5 @@
     </div>
 </div>
 </body>
-</html>
+</html>\
+<?php include('./views/partials/itemfooter.php'); ?>
