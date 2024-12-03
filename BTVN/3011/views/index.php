@@ -40,7 +40,7 @@
                         <tr>
                             <td><?= htmlspecialchars($products['name']) ?></td>
                             <td><?= htmlspecialchars($products['gia']) ?></td>
-                            <td><?= htmlspecialchars($products['SoLuong']) ?></td>
+                            <td><?= htmlspecialchars($products['soLuong']) ?></td>
                             <td>
                                 <a href="index.php?controller=student&action=edit&id=<?= urlencode($products['id']) ?>"
                                    class="btn btn-danger">Edit</a>

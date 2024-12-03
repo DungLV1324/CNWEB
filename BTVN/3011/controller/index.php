@@ -15,7 +15,7 @@ switch ($action) {
             if (empty($name) || empty($soLuong) || empty($gia)) {
                 $error = "Not null";
             }else{
-                $db->action("INSERT INTO products (name,gia, soLuong) VALUES ('$name','$gia','$soLuong')");
+                $this->db->execute('INSERT INTO products (name, gia, SoLuong) VALUES (:name, :gia, :soLuong)');
                 header("Location:index.php?controller=products");
             }
         }
