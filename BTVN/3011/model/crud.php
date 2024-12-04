@@ -12,9 +12,8 @@ class crud extends dbProduct
         $stmt->execute();
         return $stmt->fetchAll();
     }
-
-    public function action($sql)
+    public  function action ($sql)
     {
-        $this->conn->execute($sql);
+        $this->conn->exec($sql);
     }
 }

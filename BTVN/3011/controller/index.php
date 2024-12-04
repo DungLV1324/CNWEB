@@ -7,7 +7,7 @@ if (isset($_GET['action'])) {
     $action = "";
 }
 switch ($action) {
-    case 'add':
+    case "add":
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
             $gia = $_POST['gia'];
@@ -15,7 +15,7 @@ switch ($action) {
             if (empty($name) || empty($soLuong) || empty($gia)) {
                 $error = "Not null";
             }else{
-                $this->db->execute('INSERT INTO products (name, gia, SoLuong) VALUES (:name, :gia, :soLuong)');
+                $db->action("INSERT INTO products (name, gia, SoLuong) VALUES ('$name','$gia','$soLuong')");
                 header("Location:index.php?controller=products");
             }
         }
@@ -23,10 +23,10 @@ switch ($action) {
         require_once './views/add.php';
         break;
 
-        case 'edit':
+        case "edit":
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
-                foreach ($db-> getData("SELECT * FROM student WHERE id = '$id'") as $row) {
+                foreach ($db-> getData("SELECT * FROM products WHERE id = '$id'") as $row) {
                     $name = isset($row['name'])?$row['name']:'';
                     $gia = isset($row['gia'])?$row['gia']:'';
                     $soLuong = isset($row['soLuong'])?$row['soLuong']:'';
@@ -48,10 +48,10 @@ switch ($action) {
             require_once './views/edit.php';
             break;
 
-            case 'delete':
+            case "delete":
                 if (isset($_GET['id'])) {
                     $id = $_GET['id'];
-                    $db ->action("DELETE FROM student WHERE id = '$id'");
+                    $db ->action("DELETE FROM products WHERE id = '$id'");
                     header("Location:index.php?controller=products");
                 }
                 break;

@@ -22,7 +22,7 @@
                         <h2>Manage <b>Products</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="index.php?controller=products&action=add" class="btn btn-success" data-toggle="modal"><i
+                        <a href="index.php?controller=products&action=add" class="btn btn-success" ><i
                                     class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
                     </div>
                 </div>
@@ -45,9 +45,9 @@
                             <td><?= htmlspecialchars($products['gia']) ?></td>
                             <td><?= htmlspecialchars($products['soLuong']) ?></td>
                             <td>
-                                <a href="index.php?controller=student&action=edit&id=<?= urlencode($products['id']) ?>"
+                                <a href="index.php?controller=products&action=edit&id=<?= urlencode($products['id']) ?>"
                                    class="btn btn-danger">Edit</a>
-                                <a href="index.php?controller=student&action=delete&id=<?= urlencode($products['id']) ?>"
+                                <a href="index.php?controller=products&action=delete&id=<?= urlencode($products['id']) ?>"
                                    class="btn btn-primary">Delete</a>
                             </td>
                         </tr>
