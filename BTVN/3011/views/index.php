@@ -46,9 +46,9 @@
                             <td><?= htmlspecialchars($products['soLuong']) ?></td>
                             <td>
                                 <a href="index.php?controller=products&action=edit&id=<?= urlencode($products['id']) ?>"
-                                   class="btn btn-danger">Edit</a>
+                                   class="btn"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 <a href="index.php?controller=products&action=delete&id=<?= urlencode($products['id']) ?>"
-                                   class="btn btn-primary">Delete</a>
+                                   class="btn"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                             </td>
                         </tr>
                         <?php
