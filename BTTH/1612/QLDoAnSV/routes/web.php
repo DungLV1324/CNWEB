@@ -1,13 +1,11 @@
 <?php
 
-use App\Http\Controllers\IssuesController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\IssuesController;
 
 // Đường dẫn hiển thị danh sách đồ án (trang chủ)
 
-Route::get('/', [IssuesController::class, 'index'])->name('theses.index');
-
+Route::get('/', [IssuesController::class, 'index'])->name('issues.index');
 // Đường dẫn để tạo mới một đồ án (hiển thị form thêm mới)
 Route::get('/issues/create', [IssuesController::class, 'create'])->name('issues.create');
 
@@ -25,6 +23,3 @@ Route::put('/issues/{id}', [IssuesController::class, 'update'])->name('issues.up
 
 // Đường dẫn để xóa đồ án (thực hiện xóa sau khi có modal xác nhận)
 Route::delete('/issues/{id}', [IssuesController::class, 'destroy'])->name('issues.destroy');
-Route::get('/', function () {
-    return view('welcome');
-});

@@ -6,7 +6,7 @@ use App\Models\Computer;
 use App\Models\Issue;
 use Illuminate\Http\Request;
 
-class IssuesController extends Controller
+class IssuesController extends Controller1612
 {
     // 1. Hiển thị danh sách vấn đề
 
@@ -42,16 +42,7 @@ class IssuesController extends Controller
             ->with('success', 'Vấn đề đã được thêm mới.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
     // 4. Hiển thị form cập nhật vấn đề
-
     public function edit(string $id)
     {
         $issue = Issue::findOrFail($id);
@@ -73,7 +64,7 @@ class IssuesController extends Controller
             'status' => 'required|in:Open,In Progress,Resolved',
         ]);
 
-        $issue = Issue::findOrFail($id);
+        $issue = Issue::find($id);
         $issue->update($request->all());
 
         return redirect()->route('issues.index')->with('success', 'Thông tin vấn đề đã được cập nhật.');
